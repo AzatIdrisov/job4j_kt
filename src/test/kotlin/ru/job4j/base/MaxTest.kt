@@ -1,7 +1,7 @@
 package ru.job4j.base
 
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
-import kotlin.test.assertTrue
 
 class MaxTest {
 
@@ -9,13 +9,15 @@ class MaxTest {
     fun testMaxWithTwoNumbers() {
         val result = max(1, 2)
         val expected = 2
-        assertTrue { result == expected }
+        assertThat(result)
+            .isEqualTo(expected)
     }
 
     @Test
     fun testMaxWithThreeNumbers() {
         val result = max(1, 2, 3)
         val expected = 3
-        assertTrue { result == expected }
+        assertThat(result)
+            .isEqualTo(expected)
     }
 }
